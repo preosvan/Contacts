@@ -1,0 +1,156 @@
+inherited MainForm_LgXhdpiPh: TMainForm_LgXhdpiPh
+  ClientHeight = 695
+  ClientWidth = 450
+  OnKeyUp = FormKeyUp
+  DesignerMasterStyle = 0
+  inherited TabControl: TTabControl
+    Size.Width = 450.000000000000000000
+    Size.Height = 695.000000000000000000
+    TabIndex = 1
+    inherited TabContacts: TTabItem [0]
+      ExplicitSize.cx = 8.000000000000000000
+      ExplicitSize.cy = 8.000000000000000000
+      inherited lbContacts: TListBox
+        Size.Width = 450.000000000000000000
+        Size.Height = 599.000000000000000000
+        OnItemClick = nil
+        Viewport.Width = 450.000000000000000000
+        Viewport.Height = 599.000000000000000000
+        inherited SearchBox: TSearchBox
+          Size.Width = 450.000000000000000000
+          Size.Height = 48.000000000000000000
+        end
+      end
+      inherited ToolBarContacts: TToolBar
+        Size.Width = 450.000000000000000000
+        Size.Height = 48.000000000000000000
+        inherited lebContacts: TLabel
+          Size.Width = 450.000000000000000000
+          Size.Height = 48.000000000000000000
+          TextSettings.Font.Size = 16.000000000000000000
+        end
+        inherited btnNewContact: TSpeedButton
+          Position.X = 402.000000000000000000
+          Size.Width = 48.000000000000000000
+          Size.Height = 48.000000000000000000
+        end
+        inherited btnSearch: TSpeedButton
+          Size.Width = 48.000000000000000000
+          Size.Height = 48.000000000000000000
+        end
+      end
+      inherited BottomToolBar: TToolBar
+        Position.Y = 647.000000000000000000
+        Size.Width = 450.000000000000000000
+        Size.Height = 48.000000000000000000
+        inherited btnSettings: TSpeedButton
+          Size.Width = 48.000000000000000000
+          Size.Height = 48.000000000000000000
+        end
+      end
+    end
+    inherited TabViewContact: TTabItem [1]
+      ExplicitSize.cx = 8.000000000000000000
+      ExplicitSize.cy = 8.000000000000000000
+      inherited ToolBarViewContact: TToolBar
+        Size.Width = 450.000000000000000000
+        Size.Height = 48.000000000000000000
+        inherited labViewContact: TLabel
+          Size.Width = 450.000000000000000000
+          Size.Height = 48.000000000000000000
+        end
+        inherited btnEditContact: TSpeedButton
+          Position.X = 402.000000000000000000
+          Size.Width = 48.000000000000000000
+          Size.Height = 48.000000000000000000
+        end
+        inherited btnAllContacts: TSpeedButton
+          Size.Width = 48.000000000000000000
+          Size.Height = 48.000000000000000000
+        end
+      end
+      inherited layViewContact: TLayout
+        inherited edFirstName: TEdit
+          Size.Height = 32.000000000000000000
+        end
+        inherited edLastName: TEdit
+          Size.Height = 32.000000000000000000
+        end
+      end
+    end
+    inherited TabNewContact: TTabItem [2]
+      ExplicitSize.cx = 8.000000000000000000
+      ExplicitSize.cy = 8.000000000000000000
+      inherited ToolBarNewContact: TToolBar
+        Size.Width = 450.000000000000000000
+        Size.Height = 48.000000000000000000
+        inherited lebNewContact: TLabel
+          Size.Width = 450.000000000000000000
+          Size.Height = 48.000000000000000000
+          TextSettings.Font.Size = 16.000000000000000000
+        end
+        inherited btnDoneNewContact: TSpeedButton
+          Position.X = 402.000000000000000000
+          Size.Width = 48.000000000000000000
+          Size.Height = 48.000000000000000000
+        end
+        inherited btnCancelNewContact: TSpeedButton
+          Size.Width = 48.000000000000000000
+          Size.Height = 48.000000000000000000
+        end
+      end
+    end
+    inherited TabEditContact: TTabItem
+      ExplicitSize.cx = 8.000000000000000000
+      ExplicitSize.cy = 8.000000000000000000
+      inherited ToolBarEditContact: TToolBar
+        Size.Width = 450.000000000000000000
+        Size.Height = 48.000000000000000000
+        inherited labEditContact: TLabel
+          Size.Width = 450.000000000000000000
+          Size.Height = 48.000000000000000000
+        end
+        inherited btnDoneEditContact: TSpeedButton
+          Position.X = 402.000000000000000000
+          Size.Width = 48.000000000000000000
+          Size.Height = 48.000000000000000000
+        end
+        inherited btnCancelEditContact: TSpeedButton
+          Size.Width = 48.000000000000000000
+          Size.Height = 48.000000000000000000
+        end
+      end
+    end
+    inherited TabSettings: TTabItem [4]
+      ExplicitSize.cx = 8.000000000000000000
+      ExplicitSize.cy = 8.000000000000000000
+      inherited laySettings: TLayout
+        inherited edServerHost: TEdit
+          Size.Height = 32.000000000000000000
+          inherited ClearEditButton1: TClearEditButton
+            Size.Width = 32.000000000000000000
+            Size.Height = 30.000000000000000000
+          end
+        end
+        inherited edServerPort: TEdit
+          Size.Height = 32.000000000000000000
+          inherited SpinEditBtnPort: TSpinEditButton
+            Size.Height = 28.000000000000000000
+          end
+        end
+        inherited btnConnect: TSpeedButton
+          Size.Height = 48.000000000000000000
+        end
+      end
+    end
+  end
+  inherited StyleBook: TStyleBook [1]
+    Styles = <
+      item
+      end>
+  end
+  inherited ActionList: TActionList [2]
+  end
+  inherited GestureManager: TGestureManager [3]
+  end
+end

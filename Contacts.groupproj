@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{D3FDB550-F83C-412C-83C8-7EC0BA768FFE}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Server\ContactsServer.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Client\ContactsClient.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="ContactsServer">
+        <MSBuild Projects="Server\ContactsServer.dproj"/>
+    </Target>
+    <Target Name="ContactsServer:Clean">
+        <MSBuild Projects="Server\ContactsServer.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ContactsServer:Make">
+        <MSBuild Projects="Server\ContactsServer.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ContactsClient">
+        <MSBuild Projects="Client\ContactsClient.dproj"/>
+    </Target>
+    <Target Name="ContactsClient:Clean">
+        <MSBuild Projects="Client\ContactsClient.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ContactsClient:Make">
+        <MSBuild Projects="Client\ContactsClient.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="ContactsServer;ContactsClient"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="ContactsServer:Clean;ContactsClient:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="ContactsServer:Make;ContactsClient:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

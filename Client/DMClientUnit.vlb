@@ -1,0 +1,10 @@
+﻿[SQLConnection]
+Coordinates=79,1,92,33
+
+[DSProviderConnection]
+Coordinates=190,1,127,33
+
+[cdsName]
+Coordinates=10,10,60,123
+ExplicitSubNodes=
+

@@ -1,0 +1,92 @@
+object MainForm: TMainForm
+  Left = 0
+  Top = 0
+  Caption = 'Contacts Server'
+  ClientHeight = 172
+  ClientWidth = 246
+  Position = ScreenCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop, iPhone, iPad]
+  OnDestroy = FormDestroy
+  OnShow = FormShow
+  DesignerMasterStyle = 0
+  object btnStart: TButton
+    Position.X = 16.000000000000000000
+    Position.Y = 136.000000000000000000
+    Size.Width = 105.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    Text = 'Start Server'
+    OnClick = btnStartClick
+  end
+  object btnStop: TButton
+    Position.X = 128.000000000000000000
+    Position.Y = 136.000000000000000000
+    Size.Width = 105.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    Text = 'Stop Server'
+    OnClick = btnStopClick
+  end
+  object edPort: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 2
+    FilterChar = '0123456789'
+    Text = '211'
+    Position.X = 16.000000000000000000
+    Position.Y = 24.000000000000000000
+    Size.Width = 185.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    OnChange = edPortChange
+  end
+  object lbPort: TLabel
+    Position.X = 16.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 81.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Server port:'
+  end
+  object edPathToDB: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 4
+    ReadOnly = True
+    Position.X = 16.000000000000000000
+    Position.Y = 72.000000000000000000
+    Size.Width = 185.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object lbPathToDB: TLabel
+    Position.X = 16.000000000000000000
+    Position.Y = 56.000000000000000000
+    Size.Width = 105.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Path to database:'
+  end
+  object btnPathToDB: TButton
+    Position.X = 208.000000000000000000
+    Position.Y = 72.000000000000000000
+    Size.Width = 25.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 6
+    Text = '...'
+    OnClick = btnPathToDBClick
+  end
+  object btnTestConnectionDB: TButton
+    Position.X = 16.000000000000000000
+    Position.Y = 104.000000000000000000
+    Size.Width = 217.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 7
+    Text = 'Test connection to DB'
+    OnClick = btnTestConnectionDBClick
+  end
+end
