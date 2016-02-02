@@ -1,0 +1,81 @@
+inherited PhoneFrame: TPhoneFrame
+  Size.Width = 315.000000000000000000
+  Size.Height = 33.000000000000000000
+  inherited LineTop: TLine
+    Size.Width = 315.000000000000000000
+  end
+  object layPhone: TLayout
+    Align = Client
+    Size.Width = 315.000000000000000000
+    Size.Height = 31.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object cbPhoneKind: TComboBox
+      Align = Left
+      Margins.Left = 10.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Position.X = 10.000000000000000000
+      Position.Y = 5.000000000000000000
+      Size.Width = 92.000000000000000000
+      Size.Height = 21.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+    end
+    object edPhoneData: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Client
+      TabOrder = 1
+      MaxLength = 50
+      FilterChar = '+0123456789() -'
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Size.Width = 165.000000000000000000
+      Size.Height = 21.000000000000000000
+      Size.PlatformDefault = False
+      TextPrompt = 'Phone'
+      StyledSettings = [Family, Size, Style]
+    end
+    object btnDeletePhone: TSpeedButton
+      Align = Right
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 10.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Position.X = 277.000000000000000000
+      Position.Y = 5.000000000000000000
+      Size.Width = 28.000000000000000000
+      Size.Height = 21.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'deleteitembutton'
+      Text = 'btnDeletePhone'
+    end
+  end
+  object BindSourceDBPhoneKind: TBindSourceDB
+    DataSet = DMClient.cdsPhoneKind
+    ScopeMappings = <>
+    Left = 144
+  end
+  object BindingsListPhoneKind: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 20
+    Top = 5
+    object LinkFillControlToField1: TLinkFillControlToField
+      Category = 'Quick Bindings'
+      Control = cbPhoneKind
+      Track = True
+      FillDataSource = BindSourceDBPhoneKind
+      FillDisplayFieldName = 'PhoneKindName'
+      AutoFill = True
+      FillExpressions = <
+        item
+          SourceMemberName = 'Id'
+          ControlMemberName = 'ImageIndex'
+        end>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+  end
+end

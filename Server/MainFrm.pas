@@ -56,7 +56,7 @@ begin
       edPathToDB.Text := OpenDialog.FileName;
       ServerConfig.DBPath := edPathToDB.Text;
       DMServer.ContactsConnection.Close;
-      DMServer.ContactsConnection.Params.Values['Database'] := ServerConfig.DBPath;
+      DMServer.ContactsConnection.Params.Database := ServerConfig.DBPath;
       DMServer.ContactsConnection.Open;
     end;
   finally
@@ -110,7 +110,7 @@ begin
   edPort.Text := IntToStr(ServerConfig.ServerPort);
   ServerContainer.DSTCPServerTransport.Port := ServerConfig.ServerPort;
   edPathToDB.Text := ServerConfig.DBPath;
-  DMServer.ContactsConnection.Params.Values['Database'] := ServerConfig.DBPath;
+  DMServer.ContactsConnection.Params.Database := ServerConfig.DBPath;
   try
     DMServer.ContactsConnection.Connected := True;
   except on e: Exception do

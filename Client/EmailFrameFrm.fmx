@@ -1,0 +1,73 @@
+inherited EmailFrame: TEmailFrame
+  Size.Height = 33.000000000000000000
+  object cbEmailKind: TComboBox
+    Align = Left
+    Items.Strings = (
+      'home'
+      'work'
+      'other')
+    Margins.Left = 10.000000000000000000
+    Margins.Top = 5.000000000000000000
+    Margins.Right = 5.000000000000000000
+    Margins.Bottom = 5.000000000000000000
+    Position.X = 10.000000000000000000
+    Position.Y = 7.000000000000000000
+    Size.Width = 92.000000000000000000
+    Size.Height = 21.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+  end
+  object edEmailData: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Align = Client
+    TabOrder = 1
+    MaxLength = 150
+    Margins.Top = 5.000000000000000000
+    Margins.Right = 5.000000000000000000
+    Margins.Bottom = 5.000000000000000000
+    Size.Width = 170.000000000000000000
+    Size.Height = 21.000000000000000000
+    Size.PlatformDefault = False
+    TextPrompt = 'Email'
+    StyledSettings = [Family, Size, Style]
+  end
+  object btnDeleteEmail: TSpeedButton
+    Align = Right
+    Margins.Top = 5.000000000000000000
+    Margins.Right = 10.000000000000000000
+    Margins.Bottom = 5.000000000000000000
+    Position.X = 282.000000000000000000
+    Position.Y = 7.000000000000000000
+    Size.Width = 28.000000000000000000
+    Size.Height = 21.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'deleteitembutton'
+    Text = 'btnDeleteEmail'
+  end
+  object BindSourceDBEmailKind: TBindSourceDB
+    DataSet = DMClient.cdsEmailKind
+    ScopeMappings = <>
+    Left = 144
+  end
+  object BindingsListEmailKind: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 20
+    Top = 5
+    object LinkFillControlToField1: TLinkFillControlToField
+      Category = 'Quick Bindings'
+      Control = cbEmailKind
+      Track = True
+      FillDataSource = BindSourceDBEmailKind
+      FillDisplayFieldName = 'EmailKindName'
+      AutoFill = True
+      FillExpressions = <
+        item
+          SourceMemberName = 'Id'
+          ControlMemberName = 'ImageIndex'
+        end>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+  end
+end

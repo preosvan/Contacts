@@ -1,0 +1,23 @@
+object BaseFrame: TBaseFrame
+  Size.Width = 320.000000000000000000
+  Size.Height = 240.000000000000000000
+  Size.PlatformDefault = False
+  object LineTop: TLine
+    Align = Top
+    LineType = Top
+    ShortenLine = True
+    Size.Width = 320.000000000000000000
+    Size.Height = 2.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Kind = Gradient
+    Stroke.Gradient.Points = <
+      item
+        Color = claDodgerblue
+        Offset = 0.000000000000000000
+      end
+      item
+        Color = claWhite
+        Offset = 1.000000000000000000
+      end>
+  end
+end
