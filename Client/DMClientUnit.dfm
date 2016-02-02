@@ -16,14 +16,12 @@ object DMClient: TDMClient
         'DriverAssemblyLoader=Borland.Data.TDBXClientDriverLoader,Borland' +
         '.Data.DbxClientDriver,Version=23.0.0.0,Culture=neutral,PublicKey' +
         'Token=91d62ebb5b0d1b1b')
-    Connected = True
     Left = 56
     Top = 16
     UniqueId = '{33AD6408-D8D4-43D2-8CA1-5F6CE2226D1F}'
   end
   object DSProviderConnection: TDSProviderConnection
     ServerClassName = 'TServerMethods'
-    Connected = True
     SQLConnection = SQLConnection
     Left = 168
     Top = 16

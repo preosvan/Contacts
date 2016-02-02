@@ -4,9 +4,9 @@ object DMServer: TDMServer
   Width = 228
   object ContactsConnection: TFDConnection
     Params.Strings = (
-      'ConnectionDef=Contacts'
       'SharedCache=False'
-      'LockingMode=Normal')
+      'LockingMode=Normal'
+      'DriverID=SQLite')
     FetchOptions.AssignedValues = [evMode]
     LoginPrompt = False
     Left = 43
